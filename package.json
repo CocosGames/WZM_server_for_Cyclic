@@ -37,7 +37,7 @@
     "@colyseus/uwebsockets-transport": "^0.15.0-preview.1",
     "colyseus": "^0.15.0-preview.4",
     "cors": "^2.8.5",
-    "express": "^5.0.0-beta.1",
+    "express": "^4.18.1",
     "uwebsockets-express": "^1.2.2"
   }
 }
