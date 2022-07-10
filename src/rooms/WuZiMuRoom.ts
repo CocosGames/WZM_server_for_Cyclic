@@ -32,7 +32,7 @@ class State extends Schema {
   @type("boolean") draw: boolean;
 }
 
-export class WuZiMuRoom extends Room<State, null> {
+export class WuZiMuRoom extends Room {
   maxClients = 2;
 
   onCreate () {
@@ -96,7 +96,7 @@ export class WuZiMuRoom extends Room<State, null> {
 //
   checkBoardComplete () {
     return this.state.board
-        .filter(item => item === 0)
+        .filter((item: number) => item === 0)
         .length === 0;
   }
 

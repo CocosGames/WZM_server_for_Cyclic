@@ -6,8 +6,8 @@ import { uWebSocketsTransport } from "@colyseus/uwebsockets-transport";
 /**
  * Import your Room files
  */
-import { WuZiMuRoom } from "./rooms/WuZiMuRoom";
 import {Transport} from "colyseus";
+import {WuZiMuRoom} from "./rooms/WuZiMuRoom";
 
 export default Arena({
     getId: () => "WuZiMu Server",
@@ -18,9 +18,11 @@ export default Arena({
     },
 
     initializeGameServer: (gameServer) => {
+
         /**
          * Define your room handlers:
          */
+        // @ts-ignore
         gameServer.define('wuzimu', WuZiMuRoom);
     },
 
